@@ -1,0 +1,14 @@
+{% from "icons/icon.njk" import icon, brand %}
+<nav class="nav">
+  <div class="container nav-inner">
+    {{ brand() }}
+    <div class="nav-links">
+      {% for link in site.navLinks %}
+        <a href="{{ link.href }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    <button class="nav-cta" data-open-quote>
+      {{ icon("whatsapp", 16) }} Pedir orçamento
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+{% from "icons/icon.njk" import icon %}
+<section id="processo" class="section section-dark">
+  <div class="container">
+    <div class="sec-head">
+      <div class="left">
+        <div class="eyebrow bone">
+          <span class="dot" style="background: var(--navy-800);">{{ icon("check", 10, 3) }}</span>
+          Processo
+        </div>
+        <h2>Da primeira conversa à entrega,<br/>sem surpresas.</h2>
+        <p class="sub">
+          Um fluxo de 4 etapas. Você sabe onde o seu pedido está em cada dia 
+          e fala com gente, não com bot.
+        </p>
+      </div>
+    </div>
+    <div class="process-grid">
+      {% for step in processSteps %}
+        <div class="process-step">
+          <div class="process-num">{{ step.n }} / 04</div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.body }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

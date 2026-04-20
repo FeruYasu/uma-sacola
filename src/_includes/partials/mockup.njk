@@ -1,0 +1,96 @@
+{% from "icons/icon.njk" import icon %}
+<section id="mockup" class="section section-paper">
+  <div class="container">
+    <div class="sec-head">
+      <div class="left">
+        <div class="eyebrow" style="color: var(--navy-800); border-color: rgba(11,46,92,0.18);">
+          <span class="dot">{{ icon("check", 10, 3) }}</span>
+          Mockup grátis
+        </div>
+        <h2>Envie seu logo e veja<br/>sua sacola na hora.</h2>
+        <p class="sub">
+          Nosso gerador monta uma prévia digital da sacola com o seu logo na frente e na lateral.
+          Baixe e compartilhe com o time — sem custo, sem cadastro.
+        </p>
+      </div>
+    </div>
+
+    <div class="mockup-shell" data-mockup>
+      <div class="mockup-controls">
+        <div class="mockup-drop" data-drop>
+          <input type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" style="display: none;" data-file-input />
+          <div data-empty-state>
+            <div class="mockup-drop-icon">{{ icon("plus", 28) }}</div>
+            <div class="mockup-drop-title">Arraste seu logo aqui</div>
+            <div class="mockup-drop-hint">ou clique para escolher · PNG, JPG ou SVG</div>
+          </div>
+          <div data-loaded-state hidden>
+            <img src="" alt="logo preview" class="mockup-drop-thumb" data-logo-thumb />
+            <div class="mockup-drop-title" style="margin-top: 8px;" data-logo-name></div>
+            <button class="mockup-drop-change" data-clear-logo>Trocar logo</button>
+          </div>
+        </div>
+
+        <div class="mockup-field">
+          <label>Tamanho</label>
+          <div class="size-buttons" style="grid-template-columns: repeat(3, 1fr);">
+            {% for s in ["PP", "P", "M"] %}
+              <button class="size-btn {% if s == 'M' %}active{% endif %}" data-mockup-size="{{ s }}">
+                <span class="s-big">{{ s }}</span>
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="mockup-field">
+          <label>Cor da sacola</label>
+          <div class="mockup-colors">
+            {% set colors = [
+              { key: "white", label: "Branca", body: "#ffffff", shadow: "#e8e4d8" },
+              { key: "kraft", label: "Kraft", body: "#cda16a", shadow: "#a87a45" },
+              { key: "navy",  label: "Navy",  body: "#123a72", shadow: "#07254c" },
+              { key: "black", label: "Preta", body: "#222222", shadow: "#0a0a0a" }
+            ] %}
+            {% for c in colors %}
+              <button class="mockup-color {% if c.key == 'white' %}active{% endif %}" data-mockup-color="{{ c.key }}" title="{{ c.label }}">
+                <span class="swatch" style="background: {{ c.body }}; border-color: {{ c.shadow }};"></span>
+                <span>{{ c.label }}</span>
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="mockup-field">
+          <label>Tamanho do logo: <b style="color: var(--navy-900);"><span data-scale-val>100</span>%</b></label>
+          <input type="range" class="qty-slider" min="0.4" max="1.4" step="0.05" value="1" data-scale-slider />
+        </div>
+
+        <label class="mockup-toggle" style="opacity: 0.55;">
+          <input type="checkbox" checked disabled />
+          <span>Lateral estampada com seu logo (padrão incluso)</span>
+        </label>
+
+        <div class="mockup-actions">
+          <button class="btn btn-primary" style="width: 100%; justify-content: center;" data-open-quote data-from-mockup>
+            Gostei! Pedir orçamento {{ icon("arrow-right", 16) }}
+          </button>
+          <button class="btn btn-outline" style="width: 100%; justify-content: center; color: var(--navy-800); border-color: rgba(11,46,92,0.2);" data-download disabled>
+            Baixar mockup (PNG)
+          </button>
+        </div>
+      </div>
+
+      <div class="mockup-stage">
+        <div class="bag-photo-stage" data-bag-stage>
+          <img src="" alt="" class="bag-photo-base" data-bag-base />
+          <img src="" alt="Seu logo" class="bag-photo-logo" data-bag-logo hidden />
+          <div class="bag-photo-placeholder" data-bag-placeholder>SEU LOGO AQUI</div>
+        </div>
+        <div class="mockup-meta">
+          <span class="mockup-meta-item"><b data-meta-size>M</b> · <span data-meta-dims>28 × 20 × 10 cm</span></span>
+          <span class="mockup-meta-item">Prévia com foto real</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

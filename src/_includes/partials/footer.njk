@@ -1,0 +1,44 @@
+{% from "icons/icon.njk" import icon, brand %}
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        {{ brand() }}
+        <p>
+          Fábrica e escritório em São Paulo, capital.
+          Sacolas de papel personalizadas para lojas, eventos e campanhas — entregamos Brasil todo.
+        </p>
+      </div>
+      <div>
+        <h5>Produtos</h5>
+        <ul>
+          <li><a href="#catalogo">Sacola PP</a></li>
+          <li><a href="#catalogo">Sacola P</a></li>
+          <li><a href="#catalogo">Sacola M</a></li>
+          <li><a href="#catalogo">Sob medida</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#depoimentos">Clientes</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="#">{{ icon("whatsapp", 14) }} {{ site.whatsapp }}</a></li>
+          <li><a href="#">{{ icon("mail", 14) }} {{ site.email }}</a></li>
+          <li><a href="#">{{ icon("instagram", 14) }} {{ site.instagram }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ site.year }} Uma Sacola · CNPJ {{ site.cnpj }}</span>
+      <span>Feito com papel, tinta e cuidado em SP.</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,10 @@
+<div class="logos-strip">
+  <div class="container logos-inner">
+    <span class="label">Marcas que confiam em nós</span>
+    <div class="logos-row">
+      {% for name in site.partners %}
+        <span class="placeholder-logo">{{ name }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

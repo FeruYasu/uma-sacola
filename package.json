@@ -1,0 +1,14 @@
+{
+  "name": "uma-sacola",
+  "version": "1.0.0",
+  "description": "Site institucional Uma Sacola — sacolas personalizadas para empresas",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{% from "icons/icon.njk" import icon %}
+<section class="section section-bone">
+  <div class="container">
+    <div class="sec-head">
+      <div class="left">
+        <h2>Quatro promessas<br/>que a gente cumpre.</h2>
+      </div>
+    </div>
+    <div class="diff-grid">
+      {% for d in differentials %}
+        <div class="diff-card">
+          <div class="diff-icon">{{ icon(d.icon, 24) }}</div>
+          <h4>{{ d.title }}</h4>
+          <p>{{ d.body }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

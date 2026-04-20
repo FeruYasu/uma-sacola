@@ -1,0 +1,55 @@
+{% from "icons/icon.njk" import icon %}
+<section id="catalogo" class="section section-bone">
+  <div class="container">
+    <div class="sec-head">
+      <div class="left">
+        <h2>Quatro tamanhos,<br/>infinitas possibilidades de marca.</h2>
+        <p class="sub">
+          Preços abaixo incluem impressão em 4 cores, papel triplex 300g e alça de cordão.
+          Faixas intermediárias? Use a nossa calculadora para o valor exato.
+        </p>
+      </div>
+      <div class="cat-tabs" data-cat-tabs>
+        {% for f in products.filters %}
+          <button class="cat-tab {% if loop.first %}active{% endif %}" data-filter="{{ f }}">
+            {% if f == "Todos" %}Todos{% else %}Sacola {{ f }}{% endif %}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="cat-grid" data-cat-grid>
+      {% for p in products.list %}
+        {% set minUnit = p.prices[1000] / 1000 %}
+        <article class="prod-card" data-size="{{ p.size }}">
+          <div class="prod-image">
+            <span class="size-chip">{{ p.size }}{% if p.orientation %} · {{ p.orientation }}{% endif %}</span>
+            <img src="/{{ p.photo }}" alt="{{ p.name }} {{ p.orientation or '' }}" />
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-name">{{ p.name }}{% if p.orientation %} — {{ p.orientation }}{% endif %}</h3>
+            <p class="prod-desc">{{ p.desc }}</p>
+            <div class="prod-price-table">
+              {% for qty, price in p.prices %}
+                {% set parts = price | brlParts %}
+                {% set unit = price / qty %}
+                <div class="prod-price-row">
+                  <span class="qty">{{ qty }} un</span>
+                  <span class="unit">{{ unit | brl }}/un</span>
+                  <span class="price">R$ {{ parts.int }}<sub>,{{ parts.dec }}</sub></span>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="prod-foot">
+              <button data-open-quote
+                      data-preset-size="{{ p.size }}"
+                      data-preset-orientation="{{ p.orientation or '' }}"
+                      data-preset-qty="100">
+                Comprar {{ icon("arrow-right", 14) }}
+              </button>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+<section id="depoimentos" class="section" style="background: var(--navy-50);">
+  <div class="container">
+    <div class="sec-head" style="justify-content: center; text-align: center; flex-direction: column; align-items: center;">
+      <div class="left" style="text-align: center;">
+        <h2>Clientes que saíram<br/>com uma sacola — e voltaram.</h2>
+        <p class="sub" style="margin-left: auto; margin-right: auto;">
+          Conversas reais (com nomes e identidades preservados) de quem já produziu com a gente.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% set senderColors = ["#1f7aec", "#16a085", "#9b59b6", "#e67e22", "#c0392b", "#2c3e50"] %}
+
+  <div class="wa-carousel">
+    <div class="swiper wa-swiper" data-testimonials-swiper>
+        <div class="swiper-wrapper">
+          {% for t in testimonials %}
+            {% set color = senderColors[loop.index0 % senderColors.length] %}
+            <div class="swiper-slide">
+              <div class="wa-chat">
+                <div class="wa-header">
+                  <button class="wa-back" aria-hidden="true" type="button">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                  </button>
+                  <div class="wa-avatar" style="background: linear-gradient(135deg, {{ color }}, var(--navy-800));">{{ t.initials }}</div>
+                  <div class="wa-info">
+                    <div class="wa-name">{{ t.name }}</div>
+                    <div class="wa-status">{{ t.status }}</div>
+                  </div>
+                  <div class="wa-actions" aria-hidden="true">
+                    <span class="wa-act" title="Vídeo">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>
+                    </span>
+                    <span class="wa-act" title="Mais">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="12" cy="19" r="1.7"/></svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="wa-body">
+                  <div class="wa-day">HOJE</div>
+
+                  <div class="wa-row wa-row-in">
+                    <div class="wa-msg wa-msg-in" style="--sender-color: {{ color }};">
+                      <div class="wa-sender">{{ t.name }}</div>
+                      <div class="wa-text">{{ t.quote }}</div>
+                      <div class="wa-meta">
+                        <span class="wa-role">{{ t.role }}</span>
+                        <span class="wa-time">{{ t.timeIn }}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="wa-row wa-row-out">
+                    <div class="wa-msg wa-msg-out">
+                      <div class="wa-text">{{ t.reply }}</div>
+                      <div class="wa-meta wa-meta-out">
+                        <span class="wa-time">{{ t.timeOut }}
+                          <svg class="wa-ticks" width="16" height="11" viewBox="0 0 16 11" fill="none">
+                            <path d="M11.07 0.66L4.62 7.07 1.94 4.4 0.88 5.46 4.62 9.2l7.51-7.51-1.06-1.03zm4 0L8.62 7.07l-1.06 1.06 8.51-8.51-1.0-0.96z" fill="#53bdeb"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wa-input">
+                  <span class="wa-input-icon" title="Adesivo">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c1.5 0 2.9.4 4.2 1"/><path d="M14 21c0-5 4-9 9-9"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/><path d="M9 14c.7 1 1.8 1.5 3 1.5s2.3-.5 3-1.5"/></svg>
+                  </span>
+                  <span class="wa-input-placeholder">Mensagem</span>
+                  <span class="wa-input-icon" title="Anexar">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.05l-9.19 9.19a5.5 5.5 0 0 1-7.78-7.78l9.19-9.19a3.66 3.66 0 0 1 5.18 5.18l-9.2 9.19a1.83 1.83 0 0 1-2.59-2.59l8.49-8.48"/></svg>
+                  </span>
+                  <span class="wa-input-icon" title="Câmera">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  </span>
+                  <span class="wa-input-mic" title="Áudio">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      <button class="swiper-button-prev wa-nav wa-nav-prev" aria-label="Depoimento anterior" type="button"></button>
+      <button class="swiper-button-next wa-nav wa-nav-next" aria-label="Próximo depoimento" type="button"></button>
+      <div class="swiper-pagination wa-pagination"></div>
+    </div>
+  </div>
+</section>

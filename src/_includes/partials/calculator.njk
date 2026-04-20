@@ -1,0 +1,86 @@
+{% from "icons/icon.njk" import icon %}
+<section id="orcamento" class="section section-bone">
+  <div class="container">
+    <div class="sec-head">
+      <div class="left">
+        <h2>Calcule seu pedido<br/>em segundos.</h2>
+        <p class="sub">
+          Escolha o tamanho, quantidade e oriente a proposta. A gente devolve o orçamento detalhado em até 2 horas úteis.
+        </p>
+      </div>
+    </div>
+
+    <div class="calc-shell" data-calc>
+      <div class="calc-left">
+        <div class="calc-kicker">CONFIGURE A SUA SACOLA</div>
+        <h3>Monte seu orçamento.</h3>
+        <p class="lede">Ajuste os parâmetros ao lado e veja o valor final na hora.</p>
+
+        <div class="calc-field">
+          <div class="label">
+            <span>Tamanho</span>
+            <span class="val" data-size-val>M</span>
+          </div>
+          <div class="size-buttons">
+            {% set sizesShort = {"PP": "10×17", "P": "20×14", "M": "28×20", "G": "36×28"} %}
+            {% for s in products.sizes %}
+              <button class="size-btn {% if s == 'M' %}active{% endif %}" data-size="{{ s }}">
+                <span class="s-big">{{ s }}</span>
+                <span class="s-sm">{{ sizesShort[s] }}</span>
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="calc-field" data-orient-field>
+          <div class="label">
+            <span>Orientação</span>
+            <span class="val" data-orientation-val>Horizontal</span>
+          </div>
+          <div class="orient-buttons">
+            {% for o in products.orientations %}
+              <button class="orient-btn {% if o == 'Horizontal' %}active{% endif %}" data-orientation="{{ o }}">{{ o }}</button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <div class="label">
+            <span>Quantidade</span>
+            <span class="val" data-qty-val>250 un.</span>
+          </div>
+          <div class="qty-presets">
+            {% for p in [50, 100, 250, 500, 1000, 2000] %}
+              <button class="{% if p == 250 %}active{% endif %}" data-preset="{{ p }}">{{ p | ptNumber }}</button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-right">
+        <div class="label">Prévia</div>
+        <div class="calc-preview-bag">
+          <img src="/images/sacola-m-horizontal-foto.jpeg" alt="" data-preview-img style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+
+        <div class="calc-total-card">
+          <div class="row"><span data-summary-line>Sacola M · Horizontal</span><b><span data-summary-qty>250</span> un.</b></div>
+          <div class="row"><span>Valor por unidade</span><b data-unit-price>R$ 0,00</b></div>
+          <div class="row"><span>Impressão 4 cores + alça</span><b>Incluso</b></div>
+          <div class="divider"></div>
+          <div class="grand">
+            <div class="l">Total estimado</div>
+            <div class="r">R$ <span data-total-int>0</span><sub>,<span data-total-dec>00</span></sub></div>
+          </div>
+        </div>
+
+        <p class="hint">
+          * Valor orientativo. Frete, acabamentos especiais (verniz, hot stamping) e arte sob medida são cotados à parte.
+        </p>
+        <button class="btn btn-amber cta" data-open-quote data-from-calc>
+          Comprar {{ icon("arrow-right", 18) }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

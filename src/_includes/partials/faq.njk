@@ -1,0 +1,27 @@
+{% from "icons/icon.njk" import icon %}
+<section id="faq" class="section section-paper">
+  <div class="container">
+    <div class="sec-head" style="justify-content: center; text-align: center; flex-direction: column; align-items: center;">
+      <div class="left" style="text-align: center;">
+        <div class="eyebrow" style="color: var(--navy-800); border-color: rgba(11,46,92,0.18);">
+          <span class="dot">{{ icon("check", 10, 3) }}</span>
+          Perguntas frequentes
+        </div>
+        <h2>Antes de pedir, veja<br/>o que a gente costuma responder.</h2>
+      </div>
+    </div>
+    <div class="faq" data-faq>
+      {% for f in faqs %}
+        <div class="faq-item {% if loop.first %}open{% endif %}" data-faq-item>
+          <button class="faq-header" data-faq-toggle>
+            <span class="q">{{ f.q }}</span>
+            <span class="faq-toggle">{{ icon("plus", 16, 2.4) }}</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">{{ f.a }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
