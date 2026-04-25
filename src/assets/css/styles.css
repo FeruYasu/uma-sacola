@@ -266,6 +266,10 @@ p { margin: 0; text-wrap: pretty; }
 /* ====================== SECTIONS ====================== */
 .section { padding: 110px 0; }
 .section-tight { padding: 88px 0; }
+@media (max-width: 720px) {
+  .section { padding: 64px 0; }
+  .section-tight { padding: 52px 0; }
+}
 .section-dark { background: var(--navy-800); color: white; }
 .section-bone { background: var(--bone); }
 .section-paper { background: var(--paper); }
