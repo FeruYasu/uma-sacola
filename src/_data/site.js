@@ -11,8 +11,6 @@ module.exports = {
   navLinks: [
     { href: "#catalogo", label: "Catálogo" },
     { href: "#orcamento", label: "Orçamento" },
-    { href: "#mockup", label: "Mockup grátis" },
-    { href: "#processo", label: "Como funciona" },
     { href: "#faq", label: "Dúvidas" },
   ],
   partners: ["Tech Cell", "Atelier Lumi", "Ofélia", "Donna & Co", "Verde Mar", "Borda Studio"],

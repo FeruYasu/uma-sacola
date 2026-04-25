@@ -100,7 +100,7 @@
       switch (state.size) {
         case "PP": return "/images/sacola-pp-foto.jpeg";
         case "P":  return horiz ? "/images/sacola-p-horizontal-foto.jpeg" : "/images/sacola-p-vertical-foto.jpeg";
-        case "M":  return horiz ? "/images/sacola-m-horizontal-foto.jpeg" : "/images/sacola-m-hero.jpeg";
+        case "M":  return horiz ? "/images/sacola-m-horizontal-foto.jpeg" : "/images/sacola-m-vertical-foto.jpeg";
         case "G":  return "/images/sacola-m-hero.jpeg";
         default:   return "/images/sacola-m-hero.jpeg";
       }
