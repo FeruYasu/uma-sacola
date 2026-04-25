@@ -17,7 +17,7 @@ module.exports = [
     initials: "RD",
     status: "visto hoje às 14:30",
     quote:
-      "Entregaram 1.200 sacolas no prazo, embaladas por lote — economizou meia manhã da minha equipe.",
+      "Entregaram 1.200 sacolas no prazo, embaladas por lote, economizou meia manhã da minha equipe.",
     reply:
       "Bom demais, Rafael! A separação por lote já virou padrão pros seus pedidos. 👊",
     timeIn: "14:18",
@@ -65,7 +65,7 @@ module.exports = [
     initials: "MA",
     status: "visto hoje às 10:05",
     quote:
-      "A cor do kraft saiu idêntica em todos os lotes — antes a gente sofria com variação entre pedidos. Isso fez diferença na vitrine.",
+      "A cor do kraft saiu idêntica em todos os lotes, antes a gente sofria com variação entre pedidos. Isso fez diferença na vitrine.",
     reply:
       "Valeu, Marcos! Padronizamos o fornecedor do papel justamente por isso. Pode contar com a consistência.",
     timeIn: "16:02",
