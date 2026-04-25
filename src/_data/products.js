@@ -12,8 +12,8 @@ const list = [
     size: "PP",
     orientation: null,
     dims: "10 × 17 × 3,5 cm",
-    desc: "Ideal para acessórios pequenos, joias, perfumes e brindes compactos.",
-    photo: "images/sacola-pp-foto.jpeg",
+    desc: "Ideal para acessórios pequenos como joias e brindes compactos.",
+    photo: "images/sacola-pp-foto.png",
     prices: PRICE_TABLE.PP,
   },
   {
@@ -22,8 +22,8 @@ const list = [
     size: "P",
     orientation: "Vertical",
     dims: "13,5 × 20 × 5 cm",
-    desc: "Sacola vertical compacta para produtos menores de moda e cosmética.",
-    photo: "images/sacola-p-vertical-foto.jpeg",
+    desc: "Ideal para acessórios pequenos e celulares na caixa.",
+    photo: "images/sacola-p-vertical-foto.png",
     prices: PRICE_TABLE.P,
   },
   {
@@ -32,8 +32,8 @@ const list = [
     size: "P",
     orientation: "Horizontal",
     dims: "20 × 14 × 6 cm",
-    desc: "Formato horizontal, ótima para papelaria, livros e kits de evento.",
-    photo: "images/sacola-p-horizontal-foto.jpeg",
+    desc: "Ideal para acessórios pequenos e celulares na caixa.",
+    photo: "images/sacola-p-horizontal-foto.png",
     prices: PRICE_TABLE.P,
   },
   {
@@ -42,8 +42,8 @@ const list = [
     size: "M",
     orientation: "Vertical",
     dims: "19 × 28 × 8 cm",
-    desc: "Tamanho mais pedido: comporta roupas dobradas, caixas médias e kits.",
-    photo: "images/sacola-m-hero.jpeg",
+    desc: "Ideal para tablets, headphones e perfumes importados.",
+    photo: "images/sacola-m-vertical-foto.jpeg",
     prices: PRICE_TABLE.M,
   },
   {
@@ -52,7 +52,7 @@ const list = [
     size: "M",
     orientation: "Horizontal",
     dims: "28 × 20 × 10 cm",
-    desc: "Formato largo e elegante, perfeito para lojas de eletrônicos e ótica.",
+    desc: "Ideal para tablets, headphones e perfumes importados.",
     photo: "images/sacola-m-horizontal-foto.jpeg",
     prices: PRICE_TABLE.M,
   },
@@ -61,7 +61,7 @@ const list = [
 module.exports = {
   list,
   priceTable: PRICE_TABLE,
-  sizes: ["PP", "P", "M", "G"],
+  sizes: ["PP", "P", "M"],
   orientations: ["Vertical", "Horizontal"],
   filters: ["Todos", "PP", "P", "M"],
 };

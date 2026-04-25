@@ -1,7 +1,7 @@
 {% from "icons/icon.njk" import icon, brand %}
 <nav class="nav">
   <div class="container nav-inner">
-    {{ brand() }}
+    {{ brand(withTagline=false) }}
     <div class="nav-links">
       {% for link in site.navLinks %}
         <a href="{{ link.href }}">{{ link.label }}</a>

@@ -4,8 +4,8 @@ module.exports = {
   tagline: "Sacolas personalizadas",
   whatsapp: "(41) 98742-5892",
   whatsappDigits: "5541987425892",
-  email: "oi@umasacola.com.br",
-  instagram: "@umasacola",
+  email: "contato@umasacola.com",
+  instagram: "@uma.sacola",
   cnpj: "00.000.000/0001-00",
   year: new Date().getFullYear(),
   navLinks: [

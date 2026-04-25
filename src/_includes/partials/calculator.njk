@@ -22,11 +22,9 @@
             <span class="val" data-size-val>M</span>
           </div>
           <div class="size-buttons">
-            {% set sizesShort = {"PP": "10×17", "P": "20×14", "M": "28×20", "G": "36×28"} %}
             {% for s in products.sizes %}
               <button class="size-btn {% if s == 'M' %}active{% endif %}" data-size="{{ s }}">
                 <span class="s-big">{{ s }}</span>
-                <span class="s-sm">{{ sizesShort[s] }}</span>
               </button>
             {% endfor %}
           </div>
@@ -74,9 +72,6 @@
           </div>
         </div>
 
-        <p class="hint">
-          * Valor orientativo. Frete, acabamentos especiais (verniz, hot stamping) e arte sob medida são cotados à parte.
-        </p>
         <button class="btn btn-amber cta" data-open-quote data-from-calc>
           Comprar {{ icon("arrow-right", 18) }}
         </button>

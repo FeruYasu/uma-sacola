@@ -1,26 +1,26 @@
 module.exports = [
   {
     q: "Qual é o pedido mínimo?",
-    a: "Trabalhamos a partir de 50 unidades por modelo. Para quantidades menores sob demanda, fale com o nosso time pelo formulário — avaliamos caso a caso.",
+    a: "Trabalhamos a partir de 50 unidades por modelo.",
   },
   {
     q: "Qual o prazo de produção e entrega?",
-    a: "O prazo padrão é de 15 a 20 dias úteis após aprovação da arte e do pagamento. Entregamos em todo o Brasil via transportadora, com frete calculado no orçamento.",
+    a: "Prazo de 10 dias úteis após o pagamento da primeira parcela.",
   },
   {
-    q: "Vocês criam a arte ou eu envio o layout?",
-    a: "Os dois caminhos funcionam. Se você já tem arte finalizada, envie em PDF vetorial ou AI. Se ainda não tem, nossa equipe de design cuida disso a partir do seu logo.",
+    q: "Vocês são responsáveis pela criação da arte ou devo encaminhar a minha logo?",
+    a: "Não desenvolvemos a logo. Porém, fazemos a aplicação e ajustes da sua arte nas sacolas, fornecendo uma amostra virtual gratuitamente para validação.",
   },
   {
     q: "Quais materiais e acabamentos vocês oferecem?",
-    a: "Nossa sacola padrão é em papel triplex 300g com laminação fosca ou brilho, alças em cordão de algodão. Também produzimos em papel kraft e offset. Verniz localizado, hot stamping e relevo disponíveis.",
+    a: "Papel Offset 180 gramas com reforço na região das alças.",
   },
   {
     q: "Como funciona o pagamento?",
-    a: "50% de entrada para início da produção e 50% no momento da entrega. Aceitamos Pix, boleto e cartão (até 6× sem juros para empresas).",
+    a: "Trabalhamos com pagamento em duas etapas: 50% após a aprovação da amostra e 50% na finalização do lote. Trabalhamos exclusivamente com pagamento via Pix.",
   },
   {
-    q: "Posso ver uma amostra física antes?",
-    a: "Sim. Produzimos um protótipo físico (amostra única) pelo valor de R$ 89,90, descontado no pedido caso a produção seja aprovada.",
+    q: "Vocês fornecem amostra para validação?",
+    a: "Sim. Desenvolvemos uma amostra virtual com a sua arte aplicada nas sacolas para validação antes da produção.",
   },
 ];

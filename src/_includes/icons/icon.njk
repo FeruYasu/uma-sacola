@@ -16,21 +16,16 @@
 {%- endif -%}
 {%- endmacro -%}
 
-{%- macro logoMark(size=28, color="#3cb878") -%}
-<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 40 40" fill="none">
-  <path d="M10 14c0-3.3 2.7-6 6-6h8c3.3 0 6 2.7 6 6v2" stroke="{{ color }}" stroke-width="2.4" stroke-linecap="round"/>
-  <rect x="6" y="14" width="28" height="22" rx="3" fill="{{ color }}"/>
-  <path d="M14 20v1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M26 20v1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-</svg>
+{%- macro logoMark(size=44) -%}
+<img src="/images/logo.png" alt="Uma Sacola" width="{{ size }}" height="{{ size }}" />
 {%- endmacro -%}
 
 {%- macro brand(dark=false, withTagline=true) -%}
 <div class="brand">
-  <div class="brand-mark">{{ logoMark(28, "#3cb878") }}</div>
+  <div class="brand-mark">{{ logoMark(48) }}</div>
   <div class="brand-name {% if dark %}dark{% endif %}">
     {% if withTagline %}<span class="tl">Sacolas personalizadas</span>{% endif %}
-    <span>Uma Sacola</span>
+    <img src="/images/logo-text.svg" alt="Uma Sacola" class="brand-wordmark" />
   </div>
 </div>
 {%- endmacro -%}
